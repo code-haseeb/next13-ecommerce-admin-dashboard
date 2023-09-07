@@ -1,10 +1,7 @@
 import { Component } from "react";
-import newsletterimg from "../assets/images/newsletter.png";
+// import newsletterimg from "";
 import "./Modal.css";
 class Modal extends Component {
-  // Add constructor and state if needed
-  // Define functions for opening and closing the modal
-  // Render the modal HTML structure
   constructor(props) {
     super(props);
     this.state = {
@@ -32,22 +29,27 @@ class Modal extends Component {
           <div
             className="modal-close-overlay"
             data-modal-overlay
-            onClick={this.closeModal}
+            onClick={() => {
+              console.log("Close overlay clicked"); // Add this line
+              this.closeModal();
+            }}
           ></div>
 
           <div className="modal-content">
             <button
               className="modal-close-btn"
               data-modal-close
-              onClick={this.closeModal}
+              onClick={() => {
+                console.log("Close button clicked"); // Add this line
+                this.closeModal();
+              }}
             >
               Close
-              {/* <ion-icon name="close-outline"></ion-icon> */}
             </button>
 
             <div className="newsletter-img">
               <img
-                src={newsletterimg}
+                src="https://unsplash.com/photos/xDQKvPjxtxo"
                 alt="subscribe newsletter"
                 width={400}
                 height={400}
