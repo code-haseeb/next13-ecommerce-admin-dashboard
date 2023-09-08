@@ -12,7 +12,7 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
+// only added this line because today my windows OS is not working properly 
   useEffect(() => {
     const timer = setTimeout(() => {
       openModal();
