@@ -12,6 +12,7 @@ function App() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  
 // only added this line because today my windows OS is not working properly 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -21,7 +22,7 @@ function App() {
       clearTimeout(timer);
     };
   }, []);
-
+// Only one line is added to the code 
   return <div>{isModalOpen && <Modal closeModal={closeModal} />}</div>;
 }
 
