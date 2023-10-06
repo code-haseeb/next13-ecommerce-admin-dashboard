@@ -84,7 +84,7 @@ class SearchBar extends React.Component {
               }}
 
               // onKeyPress={}
-              //   deprecated
+              //  is deprecated😲,why?
             />
             <Button type="submit" variant="primary" text={btnText} />
           </div>
@@ -93,3 +93,14 @@ class SearchBar extends React.Component {
     );
   }
 }
+
+SearchBar.defaultProps = {
+  className: "",
+  id: "search",
+  name: "search",
+  placeholder: "Search",
+  inlineBtn: true,
+  btnText: "Search",
+  autoComplete: "off",
+};
+export default SearchBar;
